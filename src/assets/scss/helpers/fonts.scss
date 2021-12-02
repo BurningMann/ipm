@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: local('HelveticaMedium'), 
+  url('HelveticaMedium.eot?#iefix') format('embedded-opentype'),
+  url('HelveticaMedium.woff') format('woff'), 
+  url('HelveticaMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: local('HelveticaLight'), 
+  url('HelveticaLight.eot?#iefix') format('embedded-opentype'),
+  url('HelveticaLight.woff') format('woff'), 
+  url('HelveticaLight.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: local('HelveticaBold'), 
+  url('HelveticaBold.eot?#iefix') format('embedded-opentype'),
+  url('HelveticaBold.woff') format('woff'), 
+  url('HelveticaBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

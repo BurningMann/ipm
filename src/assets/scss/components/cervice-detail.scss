@@ -1,0 +1,343 @@
+.service_info {
+  display: flex;
+  border-top: 2px solid $Border-color;
+  &__main_content{
+    width: calc(100% - 350px);
+    padding: 15px 50px;
+    .description{
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 100px;
+      margin-bottom: 50px;
+    }
+    .slider_box{
+      &-title{
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+      &-slider{
+        height: 600px;
+        .slick-track, .slick-list{
+          height: 100%;
+        }
+        .slider-element{
+          position: relative;
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+          &-content{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(11, 164, 246, 0.6);
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+            text-transform: uppercase;
+            padding: 40px;
+            width: 100%;
+          }
+        }
+      }
+      .slider-control{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding-right: 50px;
+        margin-top: 30px;
+        .line{
+          width: 200px;
+          height: 2px;
+          background: $Blue;
+        }
+        .arrow {
+          width: 50px;
+          cursor: pointer;
+          .cls-1 {
+            fill: none;
+            stroke: #0ba4f6;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            transition: .5s;
+          }
+        }
+          
+      }
+    }
+    .documents_box{
+      display: flex;
+      flex-wrap: wrap;
+      &__item{
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid $Border-color;
+        padding: 20px 10px 20px 30px;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        &::before{
+          content: "";
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin-right: 30px;
+          background: url(../img/icons/telephone.svg) center/contain no-repeat;
+        }
+      }
+    }
+  }
+  &__sidebar {
+    width: 100%;
+    max-width: 350px;
+    border-left: 2px solid $Border-color;
+    flex-shrink: 0;
+    .title_box{
+      padding: 20px 10px;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-bottom: 2px solid $Border-color;
+    }
+    .img_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid $Border-color;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0 20px 60px;
+      border-bottom: 2px solid $Border-color;
+      .name{
+        font-weight: 600;
+        margin-bottom: 5px;
+        display: block;
+      }
+      .position{
+        font-size: 16px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .phone{
+        display: flex;
+        margin-bottom: 10px;
+        &:before{
+          content: "";
+          display: block;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          background: url(../img/icons/telephone.svg) center/contain no-repeat;
+        }
+        span{
+          display: block;
+          color: $Blue;
+          margin-right: 5px;
+        }
+      }
+      .email{
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .btn {
+      background: $Blue;
+      border-radius: 0;
+      margin: 20px auto 0;
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}
+.service_detail {
+  .about {
+    &__title {
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      padding: 0 20px;
+      color: #0ba4f6;
+      font-family: 'Aktiv Grotesk Corp';
+      display: block;
+      margin-bottom: 20px;
+    } 
+    &__content {
+      height: auto;
+      padding-top: 20px;
+    }
+    &__element {
+      padding: 20px 5% 20px 20px;
+      .title {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+      position: relative;
+      &-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        border-bottom: 2px solid $Border-color;
+        border-left: 2px solid $Border-color;
+        &:nth-child(2) {
+          top: 50%;
+        }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #0ba4f6;
+          position: absolute;
+          left: 0;
+          top: 100%;
+          transition: .5s;      
+        }
+        &:hover{
+          &::before{
+            top: 0;
+          }
+          svg {
+            path {
+              fill: #fff
+            }
+          }
+        }
+        svg{
+          width: 50px;
+          path {
+            transition: .5s; 
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    &__review_container {
+      .top {
+        height: 100px;
+      }
+    }
+    &__right_bar {
+      .top {
+        height: 100px;
+      }
+    }
+    &__slider_button{
+      height: calc(100% - 100px);
+    }
+  }
+  .clients {
+    margin-top: 150px;
+    .top{
+      top: -90px;
+    }
+    &__wrapper{
+      margin-bottom: 20px;
+    }
+    &__element {
+      height: 140px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .service_detail {
+    .about {
+      &__links {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        &-box {
+          width: 50%;
+          height: 100%;
+          position: relative;
+          top: auto !important;
+          border-bottom: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .service_info{
+    flex-wrap: wrap;
+  }
+  .service_info__main_content{
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .service_info__sidebar{
+    margin: 0 auto 30px;
+    border: none;
+  }
+  .service_info__main_content .documents_box__item {
+    max-width: initial;
+  }
+}
+@media screen and (max-width: 780px){
+  .service_info__main_content .description{
+    padding-right: 0;
+  }
+  .service_info__main_content .slider_box .slider-control{
+    justify-content: center;
+    margin-top: 10px;
+    .line{
+      display: none;
+    }
+  }
+  .service_info__main_content .slider_box-slider {
+    height: 400px;
+  }
+  .service_info__main_content .slider_box-slider .slider-element-content{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .service_info__main_content .documents_box__item{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+  }
+  .service_info__main_content .documents_box__item::before{
+    margin-right: 10px;
+    width: 20px;
+    
+  }
+  .service_info__sidebar .content{
+    padding: 20px 0 20px 10px;
+    text-align: center;
+  }
+  .service_info__sidebar .content .phone{
+    justify-content: center;
+  }
+  .service_detail .about__title{
+    font-size: 28px;
+    padding: 0;
+  }
+  .service_detail .about__element {
+    padding: 0;
+  }
+  
+}

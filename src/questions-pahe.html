@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./partials/head.html')
+  <body>
+    @@include('./partials/header.html')
+    <main>
+      <div class="container">
+        <div class="bredcrumbs">
+          <a href="/" class="bredcrumbs__crumb">Главная</a>
+          <a href="#content" class="bredcrumbs__crumb active">Вопрос-ответ</a>
+        </div>
+        <h1 class="page_title">Вопрос-ответ</h1>
+      </div>
+      <div class="question_answer">
+        <div class="tab_section">
+          <div class="tab_section__tab_container">
+            <div class="tab_section__tab active" data-tab="grade">Оценка</div>
+            <div class="tab_section__tab" data-tab="investments">Инвестиции</div>
+          </div>
+          <div class="tab_section__content">
+            <div class="tab_section__content_tab grade_tab active">
+              <div class="accordion_box">
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_section__content_tab investments_tab">
+              <div class="accordion_box">
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+                <div class="accordion_box__element">
+                  <div class="opener"> Вопрос Вопрос ВопросВопрос</div>
+                  <div class="content"> ОТвет  ОТвет ОТвет ОТветОТветОТветОТвет ОТветОТветОТветОТвет ОТвет ОТвет</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="link_box_with_bg">
+        <a href="#" class="link_box_with_bg__element">
+          <img src="./img/link-img-1.png" alt="">
+          <span class="width_animate_arrow">Новости @@include('./partials/arrow.html')</span>
+        </a>
+        <a href="#" class="link_box_with_bg__element">
+          <img src="./img/link-img-2.png" alt="">
+          <span class="width_animate_arrow">Портфолио @@include('./partials/arrow.html')</span>
+        </a>
+      </div>
+    </main>
+    @@include('./partials/footer.html')
+    @@include('./partials/right_sidebar.html')
+  </body>
+</html>
+
+
