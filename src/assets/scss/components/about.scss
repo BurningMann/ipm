@@ -1,0 +1,205 @@
+.about_page {
+  &__top {
+    display: flex;
+    border-top: 2px solid $Border-color;
+    border-bottom: 2px solid $Border-color;
+    @media screen and(max-width: 980px){
+      flex-direction: column-reverse;
+    }
+    .content {
+      background: $LightBlue;
+      padding: 30px 50px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      line-height: 120%;
+      @media screen and(max-width: 980px){
+        width: 100%;
+        padding: 20px;
+      }
+      p {
+        margin: 20px 0;
+      }
+    }
+    .img_box {
+      width: 50%;
+      padding: 20px 50px;
+      @media screen and(max-width: 980px){
+        width: 100%;
+        padding: 20px;
+      }
+       img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+       }
+    }
+  }
+  &__advantages {
+    padding: 50px;
+    @media screen and(max-width: 980px){ 
+      padding: 20px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background: url(../img/IPM.svg) center/cover no-repeat;
+      width: 70%;
+      padding-top: 25%;
+      opacity: .5;
+    }
+    .title {
+      font-size: 28px;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      margin-bottom: 60px;
+      font-weight: 500;
+      @media screen and(max-width: 980px){ 
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-item {
+      width: 50%;
+      margin: 0 0 50px 0;
+      padding: 20px;
+      border-left: 2px solid $Border-color;
+
+      @media screen and(max-width: 980px){
+        width: 100%;
+        padding: 0 0 20px 0;
+        margin: 0 0 20px 0;
+        border: none;
+      }
+      .title {
+        color: $Blue;
+        margin-bottom: 15px;
+        font-size: 24px;
+        @media screen and(max-width: 980px){
+          font-size: 20px;
+          word-break: break-all;
+        }
+      }
+      .text {
+        font-size: 16px;
+        line-height: 120%;
+        @media screen and(max-width: 980px){
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &__history {
+    padding-bottom: 40px;
+    .title {
+      font-size: 28px;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      margin-bottom: 60px;
+      font-weight: 500;
+      padding: 0 0 0 50px;
+      @media screen and(max-width: 980px){
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+    }
+    &-slider {
+      display: flex;
+      border-top: 2px solid $Border-color;
+      border-bottom: 2px solid $Border-color;
+      width: 100%;
+      @media screen and(max-width: 980px){
+        flex-direction: column-reverse;
+      }
+      .years_slider {
+        background: $LightBlue;
+        padding: 50px;
+        flex-shrink: 0;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 2px solid $Border-color;
+        @media screen and(max-width: 980px){
+          width: 100%;
+          padding: 20px;
+          border: none;
+        }
+        .slick-arrow {
+          position: relative;
+          top: auto;
+          left: auto;
+          right: auto;
+          background: none;
+          @media screen and(max-width: 980px){
+            position: absolute;
+            top: calc(50% - 25px);
+          }
+          &.prev {
+            transform: rotate(270deg);
+            @media screen and(max-width: 980px){
+              left: 20px;
+              transform: rotate(180deg);
+            }
+          }
+          &.next {
+            transform: rotate(90deg);
+            @media screen and(max-width: 980px){
+              right: 20px;
+              transform: rotate(0);
+            }
+          }
+          &::before {
+            display: none;
+          }
+          .cls-1 {
+            fill: none;
+            stroke: #0ba4f6;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+          }
+        }
+        .slick-list {
+          margin: 50px 0;
+        }
+        .year {
+          color: $Blue;
+          font-weight: 600;
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+      .year_content_slider {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        width: calc(100% - 250px);
+        font-size: 18px;
+        line-height: 120%;
+        @media screen and(max-width: 980px){
+          width: 100%;
+          padding: 20px;
+        }
+        .slick-track {
+          display: flex;
+          align-items: center;
+          @media screen and(max-width: 980px){
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

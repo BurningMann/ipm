@@ -255,6 +255,11 @@ textarea{
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 780px){
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .tab_section{
@@ -1751,6 +1756,8 @@ textarea{
 @import './components/porfolio-page.scss';
 @import './components/services-page.scss';
 @import './components/cervice-detail.scss';
+@import './components/about.scss';
+@import './components/news-detail.scss';
 
 
 @media screen and (max-width: 1900px) {
@@ -2074,6 +2081,9 @@ textarea{
     width: auto;
     margin: 0 20px;
   }
+  .header__phone {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -2085,9 +2095,7 @@ textarea{
   }
   .header{
     width: 100%;
-    &__phone{
-      display: none;
-    }
+    
     .logo_block{
       padding: 0;
     }
