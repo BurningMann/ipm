@@ -317,45 +317,44 @@ textarea{
       }
     }
   }
-
-  .accordion_box{
-    width: 100%;
-    padding: 0 20px;
-    &__element{
-      border: 2px solid $Border-color;
-      margin-bottom: 20px;
-      font-size: 16px;
-      .opener{
-        padding: 15px 50px 15px;
-        cursor: pointer;
-        
-        position: relative;
+}
+.accordion_box{
+  width: 100%;
+  padding: 0 20px;
+  &__element{
+    border: 2px solid $Border-color;
+    margin-bottom: 20px;
+    font-size: 16px;
+    .opener{
+      padding: 15px 50px 15px;
+      cursor: pointer;
+      
+      position: relative;
+      &::after{
+        content: "+";
+        display: block;
+        position: absolute;
+        right: 30px;
+        font-weight: 600;
+        color:#d4d4d4;
+        font-size: 24px;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+      }
+      &.active{
+        border-bottom: 2px solid $Border-color;
         &::after{
-          content: "+";
-          display: block;
-          position: absolute;
-          right: 30px;
-          font-weight: 600;
-          color:#d4d4d4;
-          font-size: 24px;
-          height: 100%;
-          top: 0;
-          display: flex;
-          align-items: center;
-          line-height: 0;
-        }
-        &.active{
-          border-bottom: 2px solid $Border-color;
-          &::after{
-            content: "-";
-          }
+          content: "-";
         }
       }
-      .content{
-        display: none;
-        padding: 20px 50px 40px;
-        line-height: 20px;
-      }
+    }
+    .content{
+      display: none;
+      padding: 20px 50px 40px;
+      line-height: 20px;
     }
   }
 }
@@ -950,6 +949,16 @@ textarea{
       font-size: 17px;
     }
   }
+  &__description {
+    margin-top: 20px;
+    line-height: 140%;
+    padding: 0 20px 0;
+
+    p {
+      margin: 20px 0;
+    }
+  }
+
   &__grade{
     width: 350px;
     border-left: 2px solid $Border-color;
@@ -1012,6 +1021,17 @@ textarea{
           }
         }
       }
+    }
+  }
+
+  &.with_card {
+    border-top: 2px solid $Border-color;
+    border-bottom: 2px solid $Border-color;
+    .btn {
+      display: none;
+    }
+    .about__content,.service_info__sidebar .content {
+      border: none;
     }
   }
 }
@@ -1801,6 +1821,16 @@ textarea{
       border-left: none;
       padding-bottom: 20px;
     }
+    .service_info__sidebar {
+      border: 2px solid $Border-color;
+      padding-bottom: 20px;
+      .content {
+        border-bottom: 2px solid $Border-color !important;
+      }
+      .btn {
+        display: flex;
+      }
+    }
   }
   .reviews{
     border-top: 2px solid #f3f3f3;
@@ -2215,5 +2245,9 @@ textarea{
   }
   .reviews__review_container .top{
     padding: 15px 20px;
+  }
+
+  .accordion_box__element .opener , .accordion_box__element .content{
+    padding: 10px 50px 10px 20px;
   }
 }
