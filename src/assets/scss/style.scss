@@ -355,6 +355,10 @@ textarea{
       display: none;
       padding: 20px 50px 40px;
       line-height: 20px;
+
+      &.no-padding {
+        padding: 0 ;
+      }
     }
   }
 }
@@ -1790,6 +1794,8 @@ textarea{
 @import './components/cervice-detail.scss';
 @import './components/about.scss';
 @import './components/news-detail.scss';
+@import './components/contacts.scss';
+@import './components/pages.scss';
 
 
 @media screen and (max-width: 1900px) {
